@@ -1,17 +1,45 @@
 import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 import ReactNativeKakaoLogin from '@killi8n/react-native-kakao-login';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    ReactNativeKakaoLogin.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button
+        title="Kakao Login"
+        onPress={async () => {
+          try {
+            const oauthToken = await ReactNativeKakaoLogin.login();
+            console.log(oauthToken);
+            const profile = await ReactNativeKakaoLogin.getProfile();
+            console.log(profile);
+          } catch (e) {
+            console.error(e);
+          }
+        }}
+      />
+      <Button
+        title="Kakao Logout"
+        onPress={async () => {
+          try {
+            const result = await ReactNativeKakaoLogin.logout();
+            console.log(result);
+          } catch (e) {
+            console.error(e);
+          }
+        }}
+      />
+      <Button
+        title="Kakao Unlink"
+        onPress={async () => {
+          try {
+            const unlinkedResult = await ReactNativeKakaoLogin.unlink();
+            console.log(unlinkedResult);
+          } catch (e) {
+            console.error(e);
+          }
+        }}
+      />
     </View>
   );
 }

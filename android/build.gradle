@@ -33,9 +33,9 @@ android {
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
     versionName "1.0"
-    
+
   }
-  
+
   buildTypes {
     release {
       minifyEnabled false
@@ -127,4 +127,5 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation "com.kakao.sdk:v2-user:2.0.2" // 카카오 로그인, 사용자 관리
 }

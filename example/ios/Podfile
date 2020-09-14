@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '11.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 def add_flipper_pods!
@@ -54,6 +54,11 @@ target 'ReactNativeKakaoLoginExample' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
   pod 'killi8n-react-native-kakao-login', :path => '../..'
+  
+  #  kakao
+  pod 'KakaoSDKCommon'
+  pod 'KakaoSDKAuth'
+  pod 'KakaoSDKUser'
 
   use_native_modules!
 

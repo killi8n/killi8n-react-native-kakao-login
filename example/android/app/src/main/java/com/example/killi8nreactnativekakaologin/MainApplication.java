@@ -11,6 +11,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+import com.kakao.sdk.common.KakaoSdk;
 import com.killi8nreactnativekakaologin.ReactNativeKakaoLoginPackage;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -49,6 +50,7 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager()); // Remove this line if you don't want Flipper enabled
+    KakaoSdk.init(this, "849a713f608005ac52b9b66c7438f675");
   }
 
   /**
