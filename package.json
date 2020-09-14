@@ -1,5 +1,5 @@
 {
-  "name": "@killi8n/react-native-kakao-login",
+  "name": "native-kakao-login",
   "version": "0.1.0",
   "description": "native modules for kakao login",
   "main": "lib/commonjs/index",
