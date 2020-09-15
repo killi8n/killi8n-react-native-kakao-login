@@ -1,6 +1,6 @@
 {
   "name": "native-kakao-login",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "native modules for kakao login",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
